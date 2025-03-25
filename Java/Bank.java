@@ -34,12 +34,43 @@ class bankAcc{
         System.out.println("Balance : " + balance);
 
     }
-}
+
+    public void deposit(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount to be deposited: ");
+        double amount = sc.nextDouble();
+        if(amount > 0){
+            balance += amount;
+            System.out.println("Amount " + amount + " deposited successfully! \n");
+        }
+        else{
+            System.out.println("Invalid deposit amount! \n");
+        }
+    }
+
+    public void withdraw(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the amount to be withdrawn: ");
+        double amount = sc.nextDouble();
+        if(amount > 0  && amount <= balance){
+            balance -= amount;
+            System.out.println("Withdrawal successfull! \n");
+        }
+        else{
+            System.out.println("Insufficient balance or invalid amount! \n");
+        }
+    }
+        
+    }
+
 
 public class Bank{
     public static void main(String[] args) {
         bankAcc b = new bankAcc();
         b.createAcc();
+        b.deposit();
+        b.displaydetails();
+        b.withdraw();
         b.displaydetails();
     }
 }
