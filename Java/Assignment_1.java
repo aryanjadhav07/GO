@@ -64,7 +64,7 @@ class bankAcc{
     }
 
 
-public class Bank{
+public class Assignment_1{
     public static void main(String[] args) {
         bankAcc b = new bankAcc();
         b.createAcc();

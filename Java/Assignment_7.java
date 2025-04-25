@@ -3,7 +3,7 @@ import pack.Addition;
 import pack.Substraction;
 import pack.division;
 
-public class Calculator{
+public class Assignment_7{
 
 public static void main(String[] args) {
     Addition a = new Addition(10,20);
