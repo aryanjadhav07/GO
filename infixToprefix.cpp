@@ -24,7 +24,7 @@ string infixToprefix(string s){
         }
         else if(s[i] == '('){
             while(!st.empty() && st.top() != ')'){
-                res += st.top();
+                res = res + st.top();
                 st.pop();
             }
             if(!st.empty()) st.pop();
