@@ -5,19 +5,20 @@ const int SIZE = 10;
 int hashTable[SIZE];
 
 void insert(int key){
-int index = key % SIZE;
-int i = 0;
+    int index = key % SIZE;
+    int i = 0; 
 
-while(hashTable[(index + i) % SIZE] != -1){
-    i++;
-    if(i == SIZE){
-        cout << "Hash table is full " << endl;
-        return ;
+    while(i < SIZE){
+        
+        int newIndex = (index + i * i) % SIZE;
+
+        if(hashTable[newIndex] == -1) {
+            hashTable[newIndex] = key;
+            return;
+        }
+        i++;
     }
-}
-
-    hashTable[(index + i) % SIZE] = key;
-
+    cout << "Hash Table is full " << endl;
 }
 
 void display(){
