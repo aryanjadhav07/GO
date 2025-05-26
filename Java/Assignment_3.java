@@ -1,7 +1,7 @@
 public class Assignment_3{
 
     public static void main(String[] args) {
-        String s1 = "Hey Aryan";
+        String s1 = "    Hey Aryan    ";
         String s2 = "Hey Aryan";
     
         char c = s1.charAt(4);
@@ -19,7 +19,7 @@ public class Assignment_3{
         String replace_String = s1.replace('n', 'a');
         System.out.println("Replaced String is : " + replace_String);
     
-        String[] words = s1.split(" ");
+        String[] words = s1.split("\\s+");
         System.out.println("Word after splitting are : ");
     
         for(String word : words){

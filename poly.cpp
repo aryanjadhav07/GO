@@ -78,18 +78,6 @@ class polynom{
             c.display_poly();
         }
 
-        void mul_poly(polynom b){
-            polynom d;
-
-            for(int i=0; i<total_terms; i++){
-                for(int j=0; j<b.total_terms; j++){
-                    d.poly[d.total_terms].coef = poly[i].coef * b.poly[j].coef;
-                    d.poly[d.total_terms++].exp = poly[i].exp + b.poly[j].exp;
-                }
-            }
-
-            d.display_poly();
-        }
 };
         
 
@@ -104,7 +92,5 @@ int main(){
     cout << "The addition of the two polynomials is : ";
     a.add_poly(b);
     a.evalulate_poly(1);
-    cout << "The multiplication of the two polynomials is : ";
-    a.mul_poly(b);
     return 0;
 }
